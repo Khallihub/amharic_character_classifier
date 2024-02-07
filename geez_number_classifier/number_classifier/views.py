@@ -10,7 +10,7 @@ import tensorflow as tf
 import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-classifier = tf.keras.models.load_model(r'model_training\cnn1.h5')
+classifier = tf.keras.models.load_model(r'geez_number_classifier\model_training\cnn1.h5')
 
 @api_view(["POST"])
 def creat_numbers(request):
