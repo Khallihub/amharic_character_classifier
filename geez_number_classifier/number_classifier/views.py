@@ -9,15 +9,8 @@ from pathlib import Path
 import tensorflow as tf
 import numpy as np
 
-
-# Get the absolute path to the current script
-script_path = os.path.dirname(os.path.abspath(__file__))
-
-# Specify the full path to cnn1.h5
-model_path = os.path.join(script_path, 'model_training', 'cnn1.h5')
-
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-classifier = tf.keras.models.load_model(model_path)
+classifier = tf.keras.models.load_model('model_training/cnn1.h5')
 
 @api_view(["POST"])
 def creat_numbers(request):
